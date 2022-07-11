@@ -11,6 +11,12 @@ const api_key = process.env.API_KEY
 
 app.use(bodyParser.json())
 
+app.use(
+    cors({
+        origin: "*"
+    })
+)
+
 app.get(`/1&${api_key}`, (req, res) => {
     myModule.database.ref('people').once('value', (snapshot) => {
         let data = snapshot.val()
