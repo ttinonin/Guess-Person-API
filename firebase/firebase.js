@@ -7,11 +7,11 @@ require('dotenv').config()
 const firebaseConfig = {
   apiKey: process.env.FIREBASE_KEY,
   authDomain: process.env.FIREBASE_AUTH,
-  databaseURL: "https://guess-api-27ab5-default-rtdb.firebaseio.com",
-  projectId: "guess-api-27ab5",
-  storageBucket: "guess-api-27ab5.appspot.com",
-  messagingSenderId: "304031227386",
-  appId: "1:304031227386:web:576419f88692f431775843"
+  databaseURL: process.env.FIREBASE_URL,
+  projectId: process.env.FIREBASE_ID,
+  storageBucket: process.env.FIREBASE_STORAGE,
+  messagingSenderId: process.env.FIREBASE_SENDER,
+  appId: process.env.FIREBASE_APP
 };
 
 
