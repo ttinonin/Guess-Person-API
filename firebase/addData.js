@@ -1,7 +1,7 @@
 const myModule = require('./firebase')
 
 function add(data,num){
-    myModule.database.ref(`people/${num}`).push().set(data)
+    myModule.database.ref().child(`people/${num}`).set(data)
 }
 
 const um ={
